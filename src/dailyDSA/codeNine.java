@@ -1,4 +1,4 @@
-package techM;
+package dailyDSA;
 import java.util.*;
 
 public class codeNine {

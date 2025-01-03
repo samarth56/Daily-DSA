@@ -1,8 +1,8 @@
-package techM;
+package dailyDSA;
 
 import java.util.Scanner;
 
-public class codeEight {
+public class codeSeven {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -16,22 +16,21 @@ public class codeEight {
         }
 
 
-        int result = findTax(n, array);
+        int result = findTotalPieces(n, array);
         System.out.println("The answer is: " + result);
     }
 
-    static int findTax(int n, int array[]){
+    static int findTotalPieces(int n, int array[]){
 
-        int totalTax = 0;
-        int threshold = 1000;
+        int rem =0;
 
         for(int i=0;i<n;i++){
-            if(array[i]>threshold){
-                totalTax += ((array[i]-threshold) *10)/100;
+            if(array[i]>=12){
+                rem += array[i]/12;
             }
         }
 
 
-        return totalTax;
+        return rem;
     }
 }
